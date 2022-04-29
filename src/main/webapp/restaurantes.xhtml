@@ -10,7 +10,30 @@
 <h:body>
 		
 	<!-- ::::::::::::: AGREGA AQUI LA TABLA DE RESTAURANTES ::::::::::::::::::: -->
-
+	
+	<h:dataTable id="dtRestaurante" var="restaurante" value="#{restauranteController.restaurantes}" headerClass="headerTable" rowClasses="rowTable rowTableInline">
+		
+		<h:column>
+			<f:facet name="header" >Nombre</f:facet>
+			<h:outputText value="#{restaurante.nombre}"></h:outputText>
+		</h:column>
+		
+		<h:column>
+			<f:facet name="header" >Direccion</f:facet>
+			<h:outputText value="#{restaurante.direccion}"></h:outputText>
+		</h:column>
+		
+		<h:column>
+			<f:facet name="header" >País</f:facet>
+			<h:outputText value="#{restaurante.pais}"></h:outputText>
+		</h:column>
+		
+		<h:column>
+			<f:facet name="header" >Gerente</f:facet>
+			<h:outputText value="#{restaurante.pais}"></h:outputText>
+		
+		</h:column>
+	</h:dataTable>
 </h:body>
 
 </html>
